@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Grandes Mulheres da Ciência</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #ffffff;
+      color: #38334a;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 20px 6%;
+      background: white;
+      border-bottom: 1px solid #eeeaf5;
+    }
+
+    .logo {
+      color: #30205f;
+      font-size: 19px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #625873;
+      font-size: 13px;
+    }
+
+    nav a:hover {
+      color: #8060c4;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 30px;
+      padding: 65px 8%;
+      background: linear-gradient(120deg, #faf9ff, #f0eaff);
+    }
+
+    .chamada {
+      color: #8060c4;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      color: #30205f;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 550px;
+      line-height: 1.8;
+      color: #625873;
+    }
+
+    .ilustracao {
+      text-align: center;
+      color: #8060c4;
+      font-size: 17px;
+      font-style: italic;
+    }
+
+    .atomo {
+      font-size: 100px;
+      font-style: normal;
+      margin-bottom: 10px;
+    }
+
+    main {
+      padding: 55px 7%;
+    }
+
+    h2 {
+      color: #30205f;
+      font-size: 29px;
+      margin-bottom: 8px;
+    }
+
+    .linha {
+      width: 50px;
+      height: 3px;
+      background: #8060c4;
+      margin-bottom: 30px;
+    }
+
+    .grade {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .cartao {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: white;
+      border: 1px solid #eeeaf5;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(48, 32, 95, 0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .cartao:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 9px 25px rgba(48, 32, 95, 0.12);
+    }
+
+    .cartao img {
+      display: block;
+      width: 100%;
+      height: 235px;
+      object-fit: cover;
+      object-position: center 30%;
+      background: #f3efff;
+    }
+
+    .conteudo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1;
+      padding: 20px;
+    }
+
+    .cartao h3 {
+      color: #30205f;
+      font-size: 19px;
+      margin-bottom: 9px;
+    }
+
+    .area {
+      display: inline-block;
+      background: #f3efff;
+      color: #69518e;
+      border-radius: 20px;
+      padding: 5px 10px;
+      font: 11px Arial, sans-serif;
+      margin-bottom: 12px;
+    }
+
+    .cartao p {
+      color: #777184;
+      font: 13px/1.7 Arial, sans-serif;
+      margin-bottom: 18px;
+    }
+
+    .botao {
+      display: inline-block;
+      margin-top: auto;
+      padding: 9px 15px;
+      border-radius: 22px;
+      background: #8060c4;
+      color: white;
+      text-decoration: none;
+      font: 12px Arial, sans-serif;
+      transition: background 0.2s;
+    }
+
+    .botao:hover {
+      background: #62449e;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 25px 6%;
+      background: #f5f1ff;
+      color: #81749b;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 900px) {
+      .grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero p {
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 550px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 13px;
+      }
+
+      .grade {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 40px 22px;
+      }
+
+      main {
+        padding: 35px 18px;
+      }
+
+      .cartao img {
+        height: 260px;
+      }
+
+      footer {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="inicio">
+    <div class="logo">⚛️ Grandes Mulheres da Ciência</div>
+
+    <nav aria-label="Menu principal">
+      <a href="#inicio">Início</a>
+      <a href="#cientistas">Cientistas</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="sobre">
+    <div>
+      <div class="chamada">
+        INSPIRAÇÃO • CONHECIMENTO • IGUALDADE
+      </div>
+
+      <h1>Grandes Mulheres da Ciência</h1>
+
+      <p>
+        Conheça a história de seis cientistas que fizeram
+        e fazem a diferença no mundo com suas descobertas,
+        pesquisas e coragem.
+      </p>
+    </div>
+
+    <div class="ilustracao">
+      <div class="atomo">⚛️</div>
+      “Ciência também é feita por mulheres.”
+    </div>
+  </section>
+
+  <main id="cientistas">
+    <h2>As Cientistas</h2>
+    <div class="linha"></div>
+
+    <section class="grade">
+
+      <article class="cartao">
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20Marie%20Curie.jpg"
+          alt="Retrato de Marie Curie"
+          loading="lazy"
+        >
+        <div class="conteudo">
+          <h3>Marie Curie</h3>
+          <span class="area">Física e Química</span>
+          <p>
+            Pioneira nos estudos sobre radioatividade e
+            ganhadora de dois Prêmios Nobel.
+          </p>
+          <a class="botao"
+             href="https://pt.wikipedia.org/wiki/Marie_Curie"
+             target="_blank" rel="noopener noreferrer">
+            Saiba mais →
+          </a>
+        </div>
+      </article>
+
+      <article class="cartao">
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Ada%20Lovelace%20portrait.jpg"
+          alt="Retrato de Ada Lovelace"
+          loading="lazy"
+        >
+        <div class="conteudo">
+          <h3>Ada Lovelace</h3>
+          <span class="area">Matemática e Computação</span>
+          <p>
+            É considerada uma das pioneiras da programação
+            por seu trabalho com a máquina analítica.
+          </p>
+          <a class="botao"
+             href="https://pt.wikipedia.org/wiki/Ada_Lovelace"
+             target="_blank" rel="noopener noreferrer">
+            Saiba mais →
+          </a>
+        </div>
+      </article>
+
+      <article class="cartao">
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Katherine%20Johnson%201983.jpg"
+          alt="Retrato de Katherine Johnson"
+          loading="lazy"
+        >
+        <div class="conteudo">
+          <h3>Katherine Johnson</h3>
+          <span class="area">Matemática e Astronomia</span>
+          <p>
+            Realizou cálculos fundamentais para missões
+            espaciais da NASA.
+          </p>
+          <a class="botao"
+             href="https://pt.wikipedia.org/wiki/Katherine_Johnson"
+             target="_blank" rel="noopener noreferrer">
+            Saiba mais →
+          </a>
+        </div>
+      </article>
+
+      <article class="cartao">
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Rosalind%20Franklin.jpg"
+          alt="Rosalind Franklin com um microscópio"
+          loading="lazy"
+        >
+        <div class="conteudo">
+          <h3>Rosalind Franklin</h3>
+          <span class="area">Química e Biologia</span>
+          <p>
+            Suas pesquisas com raios X foram fundamentais
+            para compreender a estrutura do DNA.
+          </p>
+          <a class="botao"
+             href="https://pt.wikipedia.org/wiki/Rosalind_Franklin"
+             target="_blank" rel="noopener noreferrer">
+            Saiba mais →
+          </a>
+        </div>
+      </article>
+
+      <article class="cartao">
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Bertha%20Lutz%2001.jpg"
+          alt="Retrato de Bertha Lutz"
+          loading="lazy"
+        >
+        <div class="conteudo">
+          <h3>Bertha Lutz</h3>
+          <span class="area">Biologia</span>
+          <p>
+            Cientista brasileira, especialista em anfíbios
+            e defensora dos direitos das mulheres.
+          </p>
+          <a class="botao"
+             href="https://pt.wikipedia.org/wiki/Bertha_Lutz"
+             target="_blank" rel="noopener noreferrer">
+            Saiba mais →
+          </a>
+        </div>
+      </article>
+
+      <article class="cartao">
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Jane-goodall.jpg"
+          alt="Retrato de Jane Goodall"
+          loading="lazy"
+        >
+        <div class="conteudo">
+          <h3>Jane Goodall</h3>
+          <span class="area">Primatologia</span>
+          <p>
+            Ficou conhecida mundialmente por seus estudos
+            sobre o comportamento dos chimpanzés.
+          </p>
+          <a class="botao"
+             href="https://pt.wikipedia.org/wiki/Jane_Goodall"
+             target="_blank" rel="noopener noreferrer">
+            Saiba mais →
+          </a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer id="contato">
+    <span>⚛️</span>
+    <span>CIÊNCIA • RESPEITO • UM FUTURO MAIS IGUAL</span>
+    <span>Grandes mulheres, grandes descobertas.</span>
+  </footer>
+
+</body>
+</html>
